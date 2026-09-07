@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment variables (NUNCA subir)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Uploaded images (cada servidor tiene las suyas)
+public/images/docentes/*.jpg
+public/images/docentes/*.png
+public/images/auxiliares/*.jpg
+public/images/auxiliares/*.jpeg
+public/images/auxiliares/*.png
+public/images/eventos/*.jpg
+public/images/eventos/*.png
+public/images/comunicados/*.jpg
+public/images/comunicados/*.png
+public/images/comunicados/*.jpeg
+
+# Keep directory structure and placeholder images
+!public/images/
+!public/images/carreras/
