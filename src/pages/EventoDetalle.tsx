@@ -11,7 +11,7 @@ export default function EventoDetalle() {
 
   useEffect(() => {
     if (id) {
-      getEventoById(Number(id)).then(setEvento);
+      getEventoById(Number(id)).then((e) => setEvento(e ?? null));
     }
   }, [id]);
 

@@ -1,8 +1,8 @@
 export interface Materia {
-  id: number;
+  id?: number;
   nombre: string;
   sigla: string;
-  descripcion: string;
+  descripcion?: string;
   paralelo: string;
   gestion: string;
 }

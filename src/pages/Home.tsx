@@ -143,7 +143,7 @@ export default function Home() {
         {/* Sobre Nosotros */}
         <section className="mb-14">
           <SectionTitle title="Sobre Nosotros" />
-          <SobreNosotros embedded />
+          <SobreNosotros />
         </section>
 
         {/* Eventos */}

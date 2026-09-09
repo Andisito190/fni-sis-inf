@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Users, FileText, Calendar, GraduationCap, UserCheck, BookOpen, LogOut, Menu, X, ChevronLeft } from 'lucide-react';
+import { LayoutDashboard, Users, FileText, Calendar, GraduationCap, UserCheck, BookOpen, LogOut, Menu, ChevronLeft } from 'lucide-react';
 import { useAdminAuth } from '../hooks/admin/useAdminAuth';
 
 interface SidebarLink {

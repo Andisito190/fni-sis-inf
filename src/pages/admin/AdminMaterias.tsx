@@ -32,7 +32,7 @@ export default function AdminMaterias() {
 
   const handleEdit = (m: Materia) => {
     setEditing(m);
-    setForm({ nombre_m: m.nombreM, sigla_m: m.siglaM, descripcion: m.descripcion });
+    setForm({ nombre_m: m.nombreM, sigla_m: m.siglaM, descripcion: m.descripcion || '' });
     setShowModal(true);
   };
 
@@ -50,7 +50,7 @@ export default function AdminMaterias() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-[#1F2937]">Materias</h1>
-        <button onClick={() => { setEditing(null); setForm({ nombre_m: '', sigla_m: '' }); setShowModal(true); }} className="flex items-center gap-2 px-4 py-2 bg-[#0B3558] text-white text-sm font-medium rounded-md hover:bg-[#0C5C8C]">
+        <button onClick={() => { setEditing(null); setForm({ nombre_m: '', sigla_m: '', descripcion: '' }); setShowModal(true); }} className="flex items-center gap-2 px-4 py-2 bg-[#0B3558] text-white text-sm font-medium rounded-md hover:bg-[#0C5C8C]">
           <Plus className="w-4 h-4" /> Nueva materia
         </button>
       </div>

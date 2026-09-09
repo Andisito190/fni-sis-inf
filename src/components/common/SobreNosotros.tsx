@@ -68,11 +68,7 @@ const tabs: { id: Tab; label: string; icon: typeof Target }[] = [
   { id: 'menciones', label: 'Menciones', icon: BookOpen },
 ];
 
-interface SobreNosotrosProps {
-  embedded?: boolean;
-}
-
-export default function SobreNosotros({ embedded = false }: SobreNosotrosProps) {
+export default function SobreNosotros() {
   const [activeCareer, setActiveCareer] = useState(0);
   const [activeTab, setActiveTab] = useState<Tab>('mision');
   const career = careers[activeCareer];

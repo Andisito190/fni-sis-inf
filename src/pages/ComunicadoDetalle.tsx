@@ -11,7 +11,7 @@ export default function ComunicadoDetalle() {
 
   useEffect(() => {
     if (id) {
-      getComunicadoById(Number(id)).then(setComunicado);
+      getComunicadoById(Number(id)).then((c) => setComunicado(c ?? null));
     }
   }, [id]);
 

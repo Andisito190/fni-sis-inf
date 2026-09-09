@@ -58,7 +58,7 @@ export interface Materia {
   idMateria: number;
   nombreM: string;
   siglaM: string;
-  descripcion: string;
+  descripcion?: string;
 }
 
 export interface DocenteMateria {

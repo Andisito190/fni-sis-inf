@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, BookOpen, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { Mail, Phone, BookOpen, ChevronDown, Sparkles } from 'lucide-react';
 import type { PersonaAcademica } from '../../types';
 
 interface AcademicPersonCardProps {
