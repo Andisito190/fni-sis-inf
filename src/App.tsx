@@ -19,12 +19,22 @@ import AdminEventos from './pages/admin/AdminEventos';
 import AdminDocentes from './pages/admin/AdminDocentes';
 import AdminAuxiliares from './pages/admin/AdminAuxiliares';
 import AdminMaterias from './pages/admin/AdminMaterias';
+import Ingresar from './pages/Ingresar';
+import EstudianteDashboard from './pages/EstudianteDashboard';
 import { useAdminAuth } from './hooks/admin/useAdminAuth';
+import { useStudentAuth } from './hooks/student/useStudentAuth';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, loading } = useAdminAuth();
   if (loading) return <div className="min-h-screen flex items-center justify-center">Cargando...</div>;
   if (!isAuthenticated) return <Navigate to="/admin/login" replace />;
+  return <>{children}</>;
+}
+
+function StudentRoute({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated, loading } = useStudentAuth();
+  if (loading) return <div className="min-h-screen flex items-center justify-center">Cargando...</div>;
+  if (!isAuthenticated) return <Navigate to="/ingresar" replace />;
   return <>{children}</>;
 }
 
@@ -44,6 +54,16 @@ export default function App() {
           <Route path="laboratorios" element={<Laboratorios />} />
           <Route path="sobre-nosotros" element={<SobreNosotrosPage />} />
         </Route>
+
+        <Route path="/ingresar" element={<Ingresar />} />
+        <Route
+          path="/estudiante"
+          element={
+            <StudentRoute>
+              <EstudianteDashboard />
+            </StudentRoute>
+          }
+        />
 
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route
